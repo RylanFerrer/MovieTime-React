@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route to = "/" exact component = {Home}/>
+        <Route to = "/app"/>
       </Switch>
     </div>
   );
