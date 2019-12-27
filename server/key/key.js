@@ -1,0 +1,1 @@
+module.exports = `?api_key=75e79240a355e64e98c79872558f6b0b`
