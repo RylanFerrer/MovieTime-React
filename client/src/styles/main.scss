@@ -1,3 +1,33 @@
 .test {
     width: 100vw;
 }
+.link {
+    display: inline-block;
+}
+.slick-prev{
+    left: 25px;
+    height: 100px;
+    width: 30px;
+    background-color: black;
+    &:hover {
+        background-color: black;
+    }
+    &:focus {
+        background-color: black;
+    }
+}
+.slick-next {
+    right: 25px;
+    height: 100px;
+    width: 30px;
+    background-color: black;
+    &:hover {
+        background-color: black;
+    }
+    &:focus {
+        background-color: black;
+    }
+}
+.home__slider {
+    padding: 0 5%;
+}

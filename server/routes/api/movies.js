@@ -4,9 +4,13 @@ const API_KEY = require('../../key/key')
 const API = require("../../api")
 const router = express.Router()
 
-router.get("/", async(req,res) => {
+router.get("/popular", async(req,res) => {
     const popularMovies =  await axios.get(`${API.URL}movie/popular${API_KEY}`)
     res.send(popularMovies.data)
+})
+router.get("/latest", async(req,res) => {
+    const latestMovies = await axios.get(`${API.URL}movie/now_playing${API_KEY}`)
+    res.send(latestMovies.data)
 })
 router.get("/:id", async(req,res) => {
     const movie = await axios.get(`${API.URL}movie/${req.params.id}${API_KEY}`)

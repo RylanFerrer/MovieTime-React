@@ -1,4 +1,42 @@
 .test {
   width: 100vw;
 }
+
+.link {
+  display: inline-block;
+}
+
+.slick-prev {
+  left: 25px;
+  height: 100px;
+  width: 30px;
+  background-color: black;
+}
+
+.slick-prev:hover {
+  background-color: black;
+}
+
+.slick-prev:focus {
+  background-color: black;
+}
+
+.slick-next {
+  right: 25px;
+  height: 100px;
+  width: 30px;
+  background-color: black;
+}
+
+.slick-next:hover {
+  background-color: black;
+}
+
+.slick-next:focus {
+  background-color: black;
+}
+
+.home__slider {
+  padding: 0 5%;
+}
 /*# sourceMappingURL=main.css.map */
