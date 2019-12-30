@@ -1,0 +1,44 @@
+.movie-page {
+    &__header {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        &-overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: flex-end;
+        }
+        &-img {
+            width: 100%;
+            height: 40vh;
+        }
+    }
+}
+@include medium {
+    .movie-page {
+        &__header {
+            width: 100%;
+            height: 60vh;
+            position: relative;
+            &-img {
+                height: 60vh;
+            }
+        }
+    }
+}
+@include huge {
+    .movie-page {
+        &__header {
+            width: 100%;
+            height: 90vh;
+            position: relative;
+            &-img {
+                height: 90vh;
+            }
+        }
+    }
+}

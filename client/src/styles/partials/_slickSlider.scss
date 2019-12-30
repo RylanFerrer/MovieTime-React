@@ -1,0 +1,15 @@
+.home__slider {
+    padding: 0 20%;
+}
+.slick {
+    &-prev {
+        left: 18%;
+        height: 100px;
+        width: 30px;
+    }
+    &-next {
+        right: 18%;
+        height: 100px;
+        width: 30px;
+    }
+}

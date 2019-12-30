@@ -2,19 +2,21 @@ import React,  {useEffect, useState} from 'react';
 import HomeSlider from './Sliders/HomeSlider'
 import axios from 'axios'
 const Home = () => {
+   let [loading, setLoading] = useState(false)
    let [popularMovies, setPopularMovies] = useState(undefined)
    let [latestMovies, setLatestMovies] = useState(undefined)
    let [popularShows, setPopularShows] = useState(undefined)
     useEffect(() => { 
         const fetchData = async () => {
-            const [popular, latest, popularshow] =  await Promise.all([axios.get('/api/movies/popular'), axios.get('/api/movies/latest')])
+            const [popular, latest, popularshow] =  await Promise.all([axios.get('/api/movies/popular'), axios.get('/api/movies/latest'), axios.get('/api/tv/popular')])
             setPopularMovies(popular.data)
-            console.log(latest.data)
             setLatestMovies(latest.data)
+            setPopularShows(popularshow.data)
+            setLoading(true)
         }
         fetchData()
     }, [])
-    if (popularMovies === undefined || latestMovies === undefined) {
+    if (loading === false) {
         return <h1>Loading....</h1>
     }
     return (
@@ -25,6 +27,7 @@ const Home = () => {
             <h1>Popular Movies</h1>
             <HomeSlider  mediaType = "movie" mediaList = {popularMovies} />
             <h1>Popular Shows</h1>
+            <HomeSlider mediaType = 'tv' mediaList = {popularShows}/>
          
         </div>
     );

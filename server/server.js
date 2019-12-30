@@ -12,7 +12,7 @@ app.get("/", (req,res) => {
     res.send("Hello")
 })
 app.use("/api/movies", require("./routes/api/movies"))
-app.use()
+app.use("/api/tv", require("./routes/api/tv"))
 
 app.listen(PORT, (req,res) => {
     console.log(`Server is running on port ${PORT}`)

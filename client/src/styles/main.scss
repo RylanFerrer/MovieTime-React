@@ -1,33 +1,17 @@
+@import "./partials/breakpoints";
+@import './partials/moveInfo';
+@import './partials/slickSlider';
+body {
+    background-color:#0d131f
+}
+h3,h1,h2,h4 {
+    color:white
+}
 .test {
     width: 100vw;
+    max-height: 40%;
 }
 .link {
     display: inline-block;
 }
-.slick-prev{
-    left: 25px;
-    height: 100px;
-    width: 30px;
-    background-color: black;
-    &:hover {
-        background-color: black;
-    }
-    &:focus {
-        background-color: black;
-    }
-}
-.slick-next {
-    right: 25px;
-    height: 100px;
-    width: 30px;
-    background-color: black;
-    &:hover {
-        background-color: black;
-    }
-    &:focus {
-        background-color: black;
-    }
-}
-.home__slider {
-    padding: 0 5%;
-}
+
