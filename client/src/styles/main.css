@@ -3,7 +3,7 @@
 /* media query for high pixel density desktops */
 .movie-page__header {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   position: relative;
 }
 
@@ -21,9 +21,37 @@
           align-items: flex-end;
 }
 
+.movie-page__header-overlay-content {
+  text-align: left;
+  margin-left: 5%;
+}
+
+.movie-page__header-overlay-content-genres {
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+}
+
+.movie-page__header-overlay-content-genres-item {
+  margin-right: 5px;
+}
+
+.movie-page__header-overlay-content-title {
+  margin: 0;
+}
+
+.movie-page__header-overlay-content-score {
+  margin: 0;
+}
+
 .movie-page__header-img {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
 }
 
 @media only screen and (min-width: 768px) {
@@ -35,6 +63,9 @@
   .movie-page__header-img {
     height: 60vh;
   }
+  .movie-page__header-overlay-content {
+    margin-bottom: 5%;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -42,6 +73,9 @@
     width: 100%;
     height: 90vh;
     position: relative;
+  }
+  .movie-page__header-overlay-content {
+    font-size: 22px;
   }
   .movie-page__header-img {
     height: 90vh;

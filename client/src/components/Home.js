@@ -1,24 +1,37 @@
 import React,  {useEffect, useState} from 'react';
 import HomeSlider from './Sliders/HomeSlider'
+import LoadingScreen from './Loading/LoadingScreen'
 import axios from 'axios'
 const Home = () => {
    let [loading, setLoading] = useState(false)
    let [popularMovies, setPopularMovies] = useState(undefined)
+   let [isErr,setErr] = useState(false)
    let [latestMovies, setLatestMovies] = useState(undefined)
    let [popularShows, setPopularShows] = useState(undefined)
     useEffect(() => { 
         const fetchData = async () => {
-            const [popular, latest, popularshow] =  await Promise.all([axios.get('/api/movies/popular'), axios.get('/api/movies/latest'), axios.get('/api/tv/popular')])
-            setPopularMovies(popular.data)
-            setLatestMovies(latest.data)
-            setPopularShows(popularshow.data)
-            setLoading(true)
+           
+            try {
+                const [popular, latest, popularshow] =  await Promise.all([axios.get('/api/movies/popular'), axios.get('/api/movies/latest'), axios.get('/api/tv/popular')])
+                setPopularMovies(popular.data)
+                setLatestMovies(latest.data)
+                setPopularShows(popularshow.data)
+                setLoading(true)
+            } catch(err) {
+                setErr(true)
+            }
         }
-        fetchData()
+       fetchData()
+     
     }, [])
-    if (loading === false) {
-        return <h1>Loading....</h1>
+    //Check if there are any errors
+    if(isErr === true ) {
+        return <h1>Sorry there was an error :(</h1>
     }
+    //Add a loading page so data can load
+    if (loading === false) {
+        return  <LoadingScreen/>
+    } else 
     return (
         <div>
             <h1>Home Page</h1>
