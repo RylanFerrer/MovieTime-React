@@ -1,10 +1,12 @@
 import React,  {useEffect, useState} from 'react';
+import HomeCarousel from './Carousels/HomeCarousel'
 import HomeSlider from './Sliders/HomeSlider'
 import LoadingScreen from './Loading/LoadingScreen'
 import axios from 'axios'
 const Home = () => {
    let [loading, setLoading] = useState(false)
    let [popularMovies, setPopularMovies] = useState(undefined)
+   let [carouselMovies, setCarouselMovies] = useState(undefined)
    let [isErr,setErr] = useState(false)
    let [latestMovies, setLatestMovies] = useState(undefined)
    let [popularShows, setPopularShows] = useState(undefined)
@@ -16,6 +18,7 @@ const Home = () => {
                 setPopularMovies(popular.data)
                 setLatestMovies(latest.data)
                 setPopularShows(popularshow.data)
+                setCarouselMovies(popular.data.results.slice(0,3))
                 setLoading(true)
             } catch(err) {
                 setErr(true)
@@ -31,10 +34,11 @@ const Home = () => {
     //Add a loading page so data can load
     if (loading === false) {
         return  <LoadingScreen/>
-    } else 
+    } 
+   
     return (
         <div>
-            <h1>Home Page</h1>
+            <HomeCarousel movies = {carouselMovies}/>
             <h1>Latest Movies</h1>
             <HomeSlider mediaType = "movie" mediaList = {latestMovies}/>
             <h1>Popular Movies</h1>
