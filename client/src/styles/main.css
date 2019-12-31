@@ -1,6 +1,11 @@
 /* media query for tablet */
 /* media query for landscape, medium pixel density desktops */
 /* media query for high pixel density desktops */
+.poster-title {
+  color: white;
+  margin: 0;
+}
+
 .movie-page__header {
   width: 100%;
   height: 35vh;
