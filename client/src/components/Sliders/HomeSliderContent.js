@@ -6,7 +6,7 @@ const HomeSliderContent = (props) => {
     const {media, mediaType} = props
     return (
         <div>
-            <Tilt className="Tilt" options={{ max : 25 }}  >
+            <Tilt className="tilt-media" options={{ max : 25 }}  >
             <Link  className = "link" to = {`/${mediaType}/${media.id}`}>
                 <img alt = {media.original_title} src = {`${posterPath}${media.poster_path}`}/>
             </Link>  

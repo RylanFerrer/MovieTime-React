@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const axios = require('axios')
 const app = express();
 
 const PORT  = process.env.PORT || 5000;
@@ -12,6 +11,7 @@ app.get("/", (req,res) => {
     res.send("Hello")
 })
 app.use("/api/movies", require("./routes/api/movies"))
+app.use("/api/actor", require("./routes/api/actor"))
 app.use("/api/tv", require("./routes/api/tv"))
 
 app.listen(PORT, (req,res) => {

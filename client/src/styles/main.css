@@ -140,4 +140,9 @@ h3, h1, h2, h4 {
   background: transparent;
   /* make scrollbar transparent */
 }
+
+.tilt-media {
+  display: inline-block;
+  margin: 0 5px;
+}
 /*# sourceMappingURL=main.css.map */

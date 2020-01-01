@@ -1,13 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import {posterPath} from "../Helpers/helpervars"
 
 const CastSliderContent = (props) => {
-    const {characterName,name, image} = props
+    const {character,name, image,id} = props
     return (
         <div>
-          <img src = {`${posterPath}${image}`}/>
-          <h4> {characterName}</h4>
-          <h4>{name}</h4>  
+          <Link to = {`/actor/${id}`}>
+            <img alt = {name} src = {`${posterPath}${image}`}/>
+            <h4> {character}</h4>
+            <h4>{name}</h4>  
+          </Link>
         </div>
     );
 }
