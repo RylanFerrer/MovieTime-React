@@ -2,10 +2,11 @@
 @import './partials/moveInfo';
 @import './partials/slickSlider';
 body {
-    background-color:#0d131f
+    background-color: #363946
+    
 }
 h3,h1,h2,h4 {
-    color:white
+    color:#B1B6A6
 }
 .test {
     width: 100vw;
@@ -14,4 +15,7 @@ h3,h1,h2,h4 {
 .link {
     display: inline-block;
 }
-
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}

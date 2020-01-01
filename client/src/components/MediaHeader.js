@@ -10,7 +10,7 @@ const MediaHeader = (props) => {
                 <h3 className = "movie-page__header-overlay-content-score">{`${rating}/10`}</h3>
                 <h2 className = "movie-page__header-overlay-content-title">{title}</h2>
                 <ul className = "movie-page__header-overlay-content-genres">
-                  {genres.map((genre,index) => {
+                  {genres.slice(0,3).map((genre,index) => {
                     return <li className = "movie-page__header-overlay-content-genres-item" key = {index}>{`  ${genre.name} |`}</li>
                   })}
                 </ul>

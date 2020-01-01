@@ -8,6 +8,14 @@ router.get("/popular", async(req,res) => {
     const popularMovies =  await axios.get(`${API.URL}movie/popular${API_KEY}`)
     res.send(popularMovies.data)
 })
+router.get("/cast/:id",async(req,res)=> {
+    try {
+        const cast = await axios.get(`${API.URL}movie/${req.params.id}/credits${API_KEY}`)
+        res.send(cast.data)
+    } catch(err) {
+        res.sendStatus(400)
+    }
+});
 router.get("/latest", async(req,res) => {
     const latestMovies = await axios.get(`${API.URL}movie/now_playing${API_KEY}`)
     res.send(latestMovies.data)
