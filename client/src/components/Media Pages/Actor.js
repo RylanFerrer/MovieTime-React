@@ -19,6 +19,7 @@ const Actor = (props) => {
             setLoading(false)
         } 
         fetchData()
+        window.scrollTo(0, 0)
     },[id])
     console.log(tv)
     if(loading) 

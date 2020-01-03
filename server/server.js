@@ -13,6 +13,7 @@ app.get("/", (req,res) => {
 app.use("/api/movies", require("./routes/api/movies"))
 app.use("/api/actor", require("./routes/api/actor"))
 app.use("/api/tv", require("./routes/api/tv"))
+app.use("/api/search", require('./routes/api/search'))
 
 app.listen(PORT, (req,res) => {
     console.log(`Server is running on port ${PORT}`)

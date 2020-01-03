@@ -10,7 +10,7 @@ const NavBar = () => {
             <div className = "nav__right">
                 <ul className = "nav__menu">
                    <Link className = "nav__menu-item" to ="/">Home</Link>
-                   <Link className = "nav__menu-item" to = "/">Search</Link>
+                   <Link className = "nav__menu-item" to = "/search">Search</Link>
                 </ul>
             </div>
          

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom'
+import SearchPage from './components/Search/SearchPage'
 import Home from './components/Home'
 import Actor from './components/Media Pages/Actor'
 import Movie from './components/Media Pages/Movie'
@@ -18,6 +19,7 @@ function App() {
         <Route path = "/movie/:id"  exact component = {Movie}/>
         <Route path = "/tv/:id" exact component = {Television}/>
         <Route path = "/actor/:id" exact component = {Actor}/>
+        <Route path = "/search" exact component = {SearchPage}/>
       </Switch>
     </div>
   );
