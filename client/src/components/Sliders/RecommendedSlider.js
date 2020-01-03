@@ -1,22 +1,22 @@
 import React from 'react';
 import HomeSliderContent from './Slider Content/HomeSliderContent'
+import Slider from 'react-slick'
 import {sliderSettings} from '../Helpers/helpervars'
-
-import Slider from "react-slick";
-const HomeSlider = (props) => {
-    // Destructure props 
+const RecommendedSlider = (props) => {
     const {mediaList, mediaType} = props
+    console.log(mediaList)
     return (
         <Slider className = "home__slider"{...sliderSettings}>
         {
             mediaList.results.map((media,index) => {
             return (
-                <HomeSliderContent media = {media} mediaType = {mediaType} key = {index}/>
+                <HomeSliderContent  media = {media} mediaType = {mediaType} key = {index}/>
                 ) 
             })
         }
       </Slider>
+
     );
 }
 
-export default HomeSlider;
+export default RecommendedSlider;

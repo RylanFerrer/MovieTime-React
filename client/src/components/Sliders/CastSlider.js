@@ -1,11 +1,12 @@
 import React from 'react';
-import CastSliderContent from './CastSliderContent'
+import CastSliderContent from './Slider Content/CastSliderContent'
 import Slider from  "react-slick"
 import {sliderSettings} from '../Helpers/helpervars'
 const CastSlider = (props) => {
     const {cast} = props
     return (
-        <Slider className = "home__slider"{...sliderSettings}>
+        <div>
+        <Slider className = "home__slider "{...sliderSettings}>
             {cast.cast.map((actor,index) => {
                 if(actor.profile_path)
                 {
@@ -14,6 +15,7 @@ const CastSlider = (props) => {
                 return false
             })}
         </Slider>
+        </div>
     );
 }
 

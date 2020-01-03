@@ -1,6 +1,6 @@
 import React from 'react';
 import Tilt from 'react-tilt'
-import {posterPath} from '../Helpers/helpervars'
+import {posterPath} from '../../Helpers/helpervars'
 import {Link} from "react-router-dom"
 const HomeSliderContent = (props) => {
     const {media, mediaType} = props

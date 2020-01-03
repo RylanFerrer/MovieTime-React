@@ -36,7 +36,7 @@ const Actor = (props) => {
                return (   
                <Tilt  key = {index} className="tilt-media" options={{ max : 25 }}> 
                     <Link to = {`/movie/${movie.id}`}>
-                        <img alt = {movie.original_title} src = {`${posterPath}${movie.poster_path}`}/>
+                        <img width = "185px" height = "278px" alt = {movie.original_title} src = {`${posterPath}${movie.poster_path}`}/>
                     </Link>
                 </Tilt>
                )
@@ -48,7 +48,7 @@ const Actor = (props) => {
                return ( 
                <Tilt key =  {index} className="tilt-media" options={{ max : 25 }}>
                    <Link to = {`/tv/${show.id}`}>
-                        <img  alt = {show.original_name}src = {`${posterPath}${show.poster_path}`}/>
+                        <img width = "185px" height = "278px" alt = {show.original_name}src = {`${posterPath}${show.poster_path}`}/>
                    </Link>
                 </Tilt>)
 

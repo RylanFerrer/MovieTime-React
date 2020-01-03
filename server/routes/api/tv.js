@@ -8,6 +8,14 @@ router.get("/popular", async(req,res) => {
     const popularMovies =  await axios.get(`${API.URL}tv/popular${API_KEY}`)
     res.send(popularMovies.data)
 })
+router.get('/similar/:id', async(req,res) => {
+    const similar = await axios.get(`${API.URL}tv/${req.params.id}/similar${API_KEY}`)
+    res.send(similar.data)
+});
+router.get("/cast/:id", async(req,res) => {
+    const cast = await axios.get(`${API.URL}tv/${req.params.id}/credits${API_KEY}`)
+    res.send(cast.data)
+})
 router.get("/latest", async(req,res) => {
     const latestMovies = await axios.get(`${API.URL}movie/now_playing${API_KEY}`)
     res.send(latestMovies.data)
