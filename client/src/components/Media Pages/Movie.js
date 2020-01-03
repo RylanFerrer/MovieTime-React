@@ -3,7 +3,7 @@ import MediaHeader from '../MediaHeader'
 import Cast from '../Cast'
 import {backdropPath} from '../Helpers/helpervars'
 import LoadingScreen from '../Loading/LoadingScreen'
-import ReccommendedSlider from '../Sliders/RecommendedSlider'
+import SimilarSlider from '../Sliders/SimilarSlider'
 import axios from 'axios'
 const Movie = (props) => {
     const [movie, setMovies] = useState(undefined)
@@ -21,6 +21,7 @@ const Movie = (props) => {
             setLoading(false)
         }
         fetchData()
+        window.scrollTo(0, 0)
     }, [id])
     if (loading) {
         return  <LoadingScreen/> 
@@ -30,7 +31,7 @@ const Movie = (props) => {
            <MediaHeader  rating = {movie.vote_average} title = {movie.original_title} genres = {movie.genres} backdrop = {`${backdropPath}${movie.backdrop_path}`}/>
            <Cast mediaType = "movie" cast = {cast}/>
            <h1>Similar Movies</h1>
-           <ReccommendedSlider mediaList = {recco} mediaType = {"movie"}/>
+           <SimilarSlider mediaList = {recco} mediaType = {"movie"}/>
         </div>
     );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import HomeSliderContent from './Slider Content/HomeSliderContent'
 import Slider from 'react-slick'
 import {sliderSettings} from '../Helpers/helpervars'
-const RecommendedSlider = (props) => {
+const SimilarSlider = (props) => {
     const {mediaList, mediaType} = props
     console.log(mediaList)
     return (
@@ -19,4 +19,4 @@ const RecommendedSlider = (props) => {
     );
 }
 
-export default RecommendedSlider;
+export default SimilarSlider;

@@ -4,12 +4,14 @@ import Home from './components/Home'
 import Actor from './components/Media Pages/Actor'
 import Movie from './components/Media Pages/Movie'
 import Television from './components/Media Pages/Television'
+import NavBar from './components/Nav/NavBar'
 import "./styles/main.css"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <NavBar/>
       <Switch>
         <Route path = "/" exact component = {Home}/>
         <Route path = "/app"/>

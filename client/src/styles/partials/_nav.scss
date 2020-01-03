@@ -1,0 +1,32 @@
+.nav {
+    display: flex;
+    color: #323232;
+    height: 60px;
+    width: 100%;
+    &__left {
+        margin-left: 5%;
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    &__right {
+        margin-right: 5%;
+        width:50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__search {
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+    }
+    &__brand {
+        margin:0;
+        color: white;
+        &-red {
+            color:red
+        }
+    }
+}
