@@ -2,17 +2,27 @@
     padding: 0 20%;
 }
 .cast__slider { 
-    padding: 0 22%;
+    padding: 0 20%;
 }
 .slick {
     &-prev {
-        left: 18%;
+        left: 10%;
         height: 100px;
         width: 30px;
     }
     &-next {
-        right: 18%;
+        right: 10%;
         height: 100px;
         width: 30px;
     }
 }
+@include medium { 
+    .slick {
+        &-prev {
+            left: 18%;
+        }
+        &-next {
+            right: 18%;
+        }
+    }
+ }
