@@ -183,6 +183,19 @@
   margin: 0 30px;
 }
 
+.search__results-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .search__results-desktop {
+    display: block;
+  }
+  .search__results-mobile {
+    display: none;
+  }
+}
+
 body {
   background-color: #363946;
 }

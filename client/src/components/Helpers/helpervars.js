@@ -1,4 +1,5 @@
 export const posterPath = `http://image.tmdb.org/t/p/w185`
+export const mobilePoster = `http://image.tmdb.org/t/p/w154`
 export const backdropPath = `http://image.tmdb.org/t/p/original`
 export const sliderSettings ={
 infinite: false,

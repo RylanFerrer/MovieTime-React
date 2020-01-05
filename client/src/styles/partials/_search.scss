@@ -1,0 +1,19 @@
+.search {
+    &__results {
+        &-desktop {
+            display: none;
+        }
+    }
+}
+@include medium {
+    .search {
+        &__results {
+            &-desktop {
+                display: block;
+            }
+            &-mobile {
+                display: none;
+            }
+        }
+    }
+}
