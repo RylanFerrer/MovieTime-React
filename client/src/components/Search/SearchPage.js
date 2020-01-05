@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from 'react';
+import React, {useState} from 'react';
 import ResultsDesktop from './ResultsDesktop'
 import ResultsMobile from './ResultsMobile'
 import axios from 'axios'

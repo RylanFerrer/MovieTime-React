@@ -33,6 +33,7 @@ const Actor = (props) => {
            <h5>{actor.biography}</h5>
            <h1>Movies</h1>
            {movies.cast.map((movie,index) => {
+               // checking if the movie has a poster image
                if(movie.poster_path)
                return (   
                <Tilt  key = {index} className="tilt-media" options={{ max : 25 }}> 
