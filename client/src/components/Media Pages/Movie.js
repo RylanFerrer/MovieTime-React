@@ -4,6 +4,7 @@ import Cast from '../Cast'
 import {backdropPath} from '../Helpers/helpervars'
 import LoadingScreen from '../Loading/LoadingScreen'
 import SimilarSlider from '../Sliders/SimilarSlider'
+import Trailer from "../Trailer"
 import axios from 'axios'
 const Movie = (props) => {
     const [movie, setMovies] = useState(undefined)
@@ -24,7 +25,6 @@ const Movie = (props) => {
             setMovies(mov.data)
             setCast(actors.data)
             setRecco(reccomended.data)
-            console.log(reviewsData.data)
             setReviews(reviewsData.data.results.slice(0,4))
             setTrailer(trailerData.data.results[0])
             setLoading(false)
@@ -39,14 +39,10 @@ const Movie = (props) => {
     return (
         <div>
            <MediaHeader  rating = {movie.vote_average} title = {movie.original_title} genres = {movie.genres} backdrop = {`${backdropPath}${movie.backdrop_path}`}/>
-            <h1>Trailer</h1>
-            {trailer ?
-            <div className="resp-container">
-                <iframe className="resp-iframe" src={`https://www.youtube.com/embed/${trailer.key}`} allow="encrypted-media" allowFullScreen></iframe>
-            </div> : <h3>{`Sorry There are no trailers for: ${movie.original_title}`}</h3>}
+            <Trailer media = {movie} trailer = {trailer}/>
             <h1>Overview</h1>
             <h3 className = "text-padding">{movie.overview}</h3>
-           <Cast mediaType = "movie" cast = {cast}/>
+            <Cast mediaType = "movie" cast = {cast}/>
            <h1>Similar Movies</h1>
            <SimilarSlider mediaList = {recco} mediaType = {"movie"}/>
            <h1>Recent Reviews</h1>

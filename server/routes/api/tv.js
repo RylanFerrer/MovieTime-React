@@ -18,6 +18,14 @@ router.get('/similar/:id', async(req,res) => {
     const similar = await axios.get(`${API.URL}tv/${req.params.id}/similar${API_KEY}`)
     res.send(similar.data)
 });
+router.get('/reviews/:id', async(req,res) => {
+    const reviews = await axios.get(`${API.URL}tv/${req.params.id}/reviews${API_KEY}`)
+    res.send(reviews.data)
+});
+router.get('/videos/:id', async(req,res) => {
+    const trailer = await axios.get(`${API.URL}tv/${req.params.id}/videos${API_KEY}`)
+    res.send(trailer.data)
+});
 router.get("/cast/:id", async(req,res) => {
     const cast = await axios.get(`${API.URL}tv/${req.params.id}/credits${API_KEY}`)
     res.send(cast.data)
