@@ -1,0 +1,14 @@
+.review {
+    padding-left: 10px;
+    &--one {
+        border-left: 5px solid turquoise;
+    }
+    &--two {
+        border-left: 5px solid pink;
+    }
+    padding-left: 10px;
+    &__container {
+        padding: 0 5%;
+        text-align: left;
+    }
+}

@@ -30,7 +30,7 @@ const Actor = (props) => {
         <div>
             <img alt = {actor.name} src = {`${posterPath}${actor.profile_path}`}/>
            <h1>{actor.name}</h1>
-           <h5>{actor.biography}</h5>
+           <h5 className = "text-padding">{actor.biography}</h5>
            <h1>Movies</h1>
            {movies.cast.map((movie,index) => {
                // checking if the movie has a poster image

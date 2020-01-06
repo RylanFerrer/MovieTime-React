@@ -282,6 +282,24 @@
   }
 }
 
+.review {
+  padding-left: 10px;
+  padding-left: 10px;
+}
+
+.review--one {
+  border-left: 5px solid turquoise;
+}
+
+.review--two {
+  border-left: 5px solid pink;
+}
+
+.review__container {
+  padding: 0 5%;
+  text-align: left;
+}
+
 body {
   background-color: #363946;
 }
@@ -308,5 +326,9 @@ h3, h1, h2, h4, h5 {
 .tilt-media {
   display: inline-block;
   margin: 0 5px;
+}
+
+.text-padding {
+  padding: 0 5%;
 }
 /*# sourceMappingURL=main.css.map */

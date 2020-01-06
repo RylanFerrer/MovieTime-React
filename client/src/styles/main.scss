@@ -4,6 +4,7 @@
 @import './partials//nav';
 @import "./partials/search";
 @import "./partials/trailer";
+@import "./partials/review";
 body {
     background-color: #363946
     
@@ -25,4 +26,7 @@ h3,h1,h2,h4,h5 {
 .tilt-media {
     display: inline-block;
     margin: 0 5px;
+}
+.text-padding {
+    padding: 0 5%;
 }
