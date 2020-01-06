@@ -4,6 +4,9 @@
 .cast__slider { 
     padding: 0 20%;
 }
+.slick-slide img  { 
+    display: inline-block;
+}
 .slick {
     &-prev {
         left: 10%;

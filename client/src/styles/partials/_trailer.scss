@@ -1,0 +1,13 @@
+.resp-container {
+    height: 60vh;
+}
+.resp-iframe {
+  height: 100%;
+  width: 90%;
+}
+@include medium {
+    .resp-iframe {
+        height: 100%;
+        width: 60%;
+      }
+}

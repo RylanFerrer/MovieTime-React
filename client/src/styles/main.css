@@ -110,6 +110,10 @@
   padding: 0 20%;
 }
 
+.slick-slide img {
+  display: inline-block;
+}
+
 .slick-prev {
   left: 10%;
   height: 100px;
@@ -259,6 +263,22 @@
     display: -ms-flexbox;
     display: flex;
     background-color: red;
+  }
+}
+
+.resp-container {
+  height: 60vh;
+}
+
+.resp-iframe {
+  height: 100%;
+  width: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+  .resp-iframe {
+    height: 100%;
+    width: 60%;
   }
 }
 
